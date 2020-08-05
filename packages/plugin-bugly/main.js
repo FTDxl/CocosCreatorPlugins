@@ -16,12 +16,12 @@ module.exports = {
             Editor.Panel.open('plugin-bugly');
         },
         'say-hello'() {
-            Editor.log('Hello World!');
+            Editor.warn('Hello World!');
             // send ipc message to panel
             Editor.Ipc.sendToPanel('plugin-bugly', 'plugin-bugly:hello');
         },
         'clicked'() {
-            Editor.log('Button clicked!');
+            Editor.warn('Button clicked!');
         },
         'popup-create-menu'(event, x, y, data) {
             let electron = require('electron');

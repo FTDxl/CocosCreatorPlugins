@@ -26,7 +26,7 @@ class Hot {
     // --------------------------------检查更新--------------------------------
     _compareVersion(versionA, versionB) {
         console.log("客户端版本: " + versionA + ', 当前最新版本: ' + versionB);
-        this._options.OnVersionInfo({curVer: versionA, newVersion: versionB});
+        this._options.OnVersionInfo({ curVer: versionA, newVersion: versionB });
         let vA = versionA.split('.');
         let vB = versionB.split('.');
         for (let i = 0; i < vA.length; ++i) {

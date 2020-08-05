@@ -66,7 +66,7 @@ Editor.Panel.extend({
                         [isReverse, isSaveJson, layoutPath, pngFolder],
                         msg => {
 
-                            Editor.log("从psd转换为节点树，msg:", msg, ",nodeName:", "Canvas");
+                            Editor.warn("从psd转换为节点树，msg:", msg, ",nodeName:", "Canvas");
                         }, 1000 * 1000);
                 },
 

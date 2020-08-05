@@ -16,12 +16,12 @@ module.exports = {
       Editor.Panel.open('resize-image');
     },
     'say-hello' () {
-      Editor.log('Hello World!');
+      Editor.warn('Hello World!');
       // send ipc message to panel
       Editor.Ipc.sendToPanel('resize-image', 'resize-image:hello');
     },
     'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.warn('Button clicked!');
     }
   },
 };

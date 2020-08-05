@@ -89,7 +89,7 @@ module.exports = {
             }
         });
         // console.log('倒转之后:', list);
-        // Editor.log('倒转之后：', JSON.stringify(list));
+        // Editor.warn('倒转之后：', JSON.stringify(list));
     },
     reverseElement(nodeObj) {
         let elements = nodeObj.elements;
@@ -110,7 +110,7 @@ module.exports = {
             }
         });
         // console.log('倒转之后:', list);
-        // Editor.log('倒转之后：', JSON.stringify(list));
+        // Editor.warn('倒转之后：', JSON.stringify(list));
     },
     mountNode(parentNode, obj) {
         let node = new cc.Node(obj.name);
@@ -291,7 +291,7 @@ module.exports = {
 
         let reverse = argsList[2];
 
-        Editor.log("mount node name:", mountName);
+        Editor.warn("mount node name:", mountName);
         console.log("list:", list);
         console.log("elements:", elements);
         console.log(promisify);

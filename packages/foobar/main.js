@@ -16,12 +16,12 @@ module.exports = {
       Editor.Panel.open('foobar');
     },
     'say-hello' () {
-      Editor.log('Hello World!');
+      Editor.warn('Hello World!');
       // send ipc message to panel
       Editor.Ipc.sendToPanel('foobar', 'foobar:hello');
     },
     'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.warn('Button clicked!');
     }
   },
 };

@@ -9,11 +9,11 @@ cc.Class({
     extends: Observer,
 
     properties: {
-        manifest: {displayName: "project.manifest", default: null, url: cc.RawAsset},
-        versionLabel: {default: null, displayName: "版本号", type: cc.Label},
-        updateProgress: {displayName: "热更新进度条", default: null, type: cc.ProgressBar},
-        tipsLabel: {displayName: "消息提示", default: null, type: cc.Label},
-        addNode: {displayName: "添加节点", default: null, type: cc.Node},
+        manifest: { displayName: "project.manifest", default: null, url: cc.RawAsset },
+        versionLabel: { default: null, displayName: "版本号", type: cc.Label },
+        updateProgress: { displayName: "热更新进度条", default: null, type: cc.ProgressBar },
+        tipsLabel: { displayName: "消息提示", default: null, type: cc.Label },
+        addNode: { displayName: "添加节点", default: null, type: cc.Node },
     },
 
     _onMsg(msg, data) {

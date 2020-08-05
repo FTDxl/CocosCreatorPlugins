@@ -250,7 +250,7 @@ Editor.Panel.extend({
                                 if (err) {
                                     Editor.warn('Replace iOS icon failed!');
                                 } else {
-                                    Editor.log('Replace iOS icon succeed!');
+                                    Editor.warn('Replace iOS icon succeed!');
                                 }
                                 next();
                             });
@@ -264,7 +264,7 @@ Editor.Panel.extend({
                                 if (err) {
                                     Editor.warn('Replace Android icon failed!');
                                 } else {
-                                    Editor.log('Replace Android icon succeed!');
+                                    Editor.warn('Replace Android icon succeed!');
                                 }
                                 next();
                             });
@@ -400,7 +400,7 @@ Editor.Panel.extend({
                         Editor.warn('Replace Mac icon failed!');
                         this._trackEvent('Mac error');
                     } else {
-                        Editor.log('Replace Mac icon succeed!');
+                        Editor.warn('Replace Mac icon succeed!');
                         this._trackEvent('Mac success');
                     }
                 },
@@ -412,7 +412,7 @@ Editor.Panel.extend({
                         Editor.warn('Replace Windows icon failed!');
                         this._trackEvent('Windows error');
                     } else {
-                        Editor.log('Replace Windows icon succeed!');
+                        Editor.warn('Replace Windows icon succeed!');
                         this._trackEvent('Windows success');
                     }
                 },

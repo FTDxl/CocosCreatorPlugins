@@ -25,22 +25,22 @@
     "height": 640,
     "width": 960
   },
-  "start-scene": "91dae730-0763-412c-93bb-e3f80ef9ee3e",
-  "use-customize-simulator": false,
+  "use-customize-simulator": true,
   "use-project-simulator-setting": false,
-  "last-module-event-record-time": 0,
+  "last-module-event-record-time": 1596623175846,
   "assets-sort-type": "name",
   "facebook": {
-    "enable": false,
     "appID": "",
-    "live": {
+    "audience": {
       "enable": false
     },
-    "audience": {
+    "enable": false,
+    "live": {
       "enable": false
     }
   },
   "migrate-history": [
     "cloud-function"
-  ]
+  ],
+  "preview-port": 7456
 }

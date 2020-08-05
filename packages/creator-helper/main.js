@@ -16,12 +16,12 @@ module.exports = {
       Editor.Panel.open('creator-helper.docs');
     },
     'say-hello' () {
-      Editor.log('Hello World!');
+      Editor.warn('Hello World!');
       // send ipc message to panel
       Editor.Ipc.sendToPanel('creator-helper', 'creator-helper:hello');
     },
     'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.warn('Button clicked!');
     }
   },
 };

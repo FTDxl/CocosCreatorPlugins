@@ -16,12 +16,12 @@ module.exports = {
       Editor.Panel.open('creator-chat-room');
     },
     'say-hello' () {
-      Editor.log('Hello World!');
+      Editor.warn('Hello World!');
       // send ipc message to panel
       Editor.Ipc.sendToPanel('creator-chat-room', 'creator-chat-room:hello');
     },
     'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.warn('Button clicked!');
     }
   },
 };

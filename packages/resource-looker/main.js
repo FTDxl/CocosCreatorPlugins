@@ -16,12 +16,12 @@ module.exports = {
       Editor.Panel.open('resource-looker');
     },
     'say-hello' () {
-      Editor.log('Hello World!');
+      Editor.warn('Hello World!');
       // send ipc message to panel
       Editor.Ipc.sendToPanel('resource-looker', 'resource-looker:hello');
     },
     'clicked' () {
-      Editor.log('Button clicked!');
+      Editor.warn('Button clicked!');
     }
   },
 };

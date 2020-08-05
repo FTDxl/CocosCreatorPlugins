@@ -33,7 +33,7 @@ module.exports = {
     // register your ipc messages here
     messages: {
         'showPanel'() {
-            // Editor.log("showPanel");
+            // Editor.warn("showPanel");
             Editor.Panel.open('unpack-textureatlas');
         },
         'unpack'() {
@@ -87,7 +87,7 @@ module.exports = {
                                 Editor.error('Generating ' + spriteFrameName + ' error occurs, details:' + err);
                             }
 
-                            Editor.log(spriteFrameName + ' is generated successfully!');
+                            Editor.warn(spriteFrameName + ' is generated successfully!');
                             next();
                         };
 
@@ -127,10 +127,10 @@ module.exports = {
                                 .toFile(extractedSmallPngSavePath, sharpCallback);
                         }
                     }, () => {
-                        Editor.log(`There are ${spriteFrameNames.length} textures are generated!`);
+                        Editor.warn(`There are ${spriteFrameNames.length} textures are generated!`);
                         //start importing the generated textures folder
                         Editor.Ipc.sendToMain('asset-db:import-assets', [extractedImageSaveFolder], Path.dirname(selectionUrl), true, (err) => {
-                            if (err) Editor.log('Importing assets error occurs: details' + err);
+                            if (err) Editor.warn('Importing assets error occurs: details' + err);
 
                             Del(extractedImageSaveFolder, {force: true});
                         }, -1);

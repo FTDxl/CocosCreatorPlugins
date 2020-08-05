@@ -17,7 +17,7 @@ module.exports = {
     },
     saveScene(list, reverse, layoutPath, pngFolder) {
         Editor.Ipc.sendToPanel("psd-convert-to-node", "get-mount-node-name", nodeName => {
-            Editor.log("nodeName：", nodeName);
+            Editor.warn("nodeName：", nodeName);
             Editor.Scene.callSceneScript("psd-convert-to-node", "create-psd-node", [list, nodeName, reverse, layoutPath, pngFolder], function (err, length) {
                 // console.log(`create-psd-node callback :  length - ${length}`);
             }, () => {
@@ -41,7 +41,7 @@ module.exports = {
     },
     parseNode(node, list) {
         let children = [];
-        // Editor.log(node);
+        // Editor.warn(node);
         if (node.children && node.children.length > 0) {
             node.children.forEach(child => {
                 let childList = [];

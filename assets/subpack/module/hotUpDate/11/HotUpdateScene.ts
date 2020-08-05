@@ -1,24 +1,24 @@
-import {ProgressInfo, HotOptions} from "./HotUpdate";
+import { ProgressInfo, HotOptions } from "./HotUpdate";
 import HotUpdate from './HotUpdate'
 import DialogMgr from "../ui/DialogMgr";
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class NewClass extends cc.Component {
-    @property({displayName: 'project.manifest', type: cc.Asset,})
+    @property({ displayName: 'project.manifest', type: cc.Asset, })
     manifest: string = null;
 
-    @property({displayName: '版本号', type: cc.Label,})
+    @property({ displayName: '版本号', type: cc.Label, })
     versionLabel: cc.Label = null;
 
-    @property({displayName: '热更新进度条', type: cc.ProgressBar})
+    @property({ displayName: '热更新进度条', type: cc.ProgressBar })
     updateProgress: cc.ProgressBar = null;
 
-    @property({displayName: '消息提示', type: cc.Label})
+    @property({ displayName: '消息提示', type: cc.Label })
     tipsLabel: cc.Label = null;
 
-    @property({displayName: '添加节点', type: cc.Node})
+    @property({ displayName: '添加节点', type: cc.Node })
     addNode: cc.Node = null;
 
 

@@ -19,7 +19,7 @@ let self = module.exports = {
     },
     updateBuildTimeByMain(time) {
         // 在main.js中调用electron中没有remote属性
-        // Editor.log(electron.app.getPath('userData'));
+        // Editor.warn(electron.app.getPath('userData'));
         let cfgPath = this._getAppCfgPath();
         if (fs.existsSync(cfgPath)) {
             let data = fs.readFileSync(cfgPath, 'utf-8');
@@ -28,7 +28,7 @@ let self = module.exports = {
             json.genTime = time;
             fs.writeFileSync(cfgPath, JSON.stringify(json));
         } else {
-            Editor.log("热更新配置文件不存在: " + cfgPath);
+            Editor.warn("热更新配置文件不存在: " + cfgPath);
         }
     },
     updateBuildTime(time) {

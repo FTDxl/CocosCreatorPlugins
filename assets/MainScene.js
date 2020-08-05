@@ -1,21 +1,14 @@
 // 因为引入子包,所以,打包时启动成就也就必须设置为该scene了
 cc.Class({
     extends: cc.Component,
-
     properties: {
-        f:cc.Prefab,
+        f: cc.Prefab,
     },
-
-
     onLoad() {
-
     },
-
     start() {
-
-
     },
-    _loadAllSubpack(){
+    _loadAllSubpack() {
         if (CC_BUILD) {
             console.log("build 环境");
             this._loadSubPackages(['subpack'], function () {
@@ -48,7 +41,7 @@ cc.Class({
             cc.director.loadScene("ImageEncryption");
         });
     },
-    onClick(){
+    onClick() {
         this._loadAllSubpack();
     },
 });

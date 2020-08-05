@@ -59,7 +59,7 @@ Editor.Panel.extend({
 
                 Editor.Profile.load("profile://project/hot-update-tools.json", function (error, profile) {
                     if (error) {
-                        Editor.log(error);
+                        Editor.warn(error);
                     } else {
                         this.profile = profile;
                         this.staticFileDir = profile.data.staticFileDir;

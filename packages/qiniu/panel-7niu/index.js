@@ -48,7 +48,7 @@ Editor.Panel.extend({
                 _panelCreated() {
                     Editor.Profile.load("profile://project/7niu.json", function (error, profile) {
                         if (error) {
-                            Editor.log(error);
+                            Editor.warn(error);
                         } else {
                             this.profile = profile;
                             this.accessKey = profile.data['accessKey'];
@@ -147,7 +147,7 @@ Editor.Panel.extend({
                                     console.log(error.message);
                                     let ret = error.message.replace('incorrect region, please use ', "");
                                     let areaName = this.getStorageAreaNameByUrl(ret);
-                                    Editor.log(`可能选择的存储空间有误, 上传失败:${uploadKey},请尝试使用[${areaName}]重新上传`);
+                                    Editor.warn(`可能选择的存储空间有误, 上传失败:${uploadKey},请尝试使用[${areaName}]重新上传`);
                                 } else {
                                     console.log(result);
                                     this._uploadItemSuccess(result);

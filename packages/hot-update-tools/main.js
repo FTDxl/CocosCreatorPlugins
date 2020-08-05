@@ -13,7 +13,7 @@ module.exports = {
         },
         'test'(event, args) {
             console.log("1111111");
-            Editor.log(args);
+            Editor.warn(args);
             Editor.Ipc.sendToPanel('hot-update-tools', 'hot-update-tools:onBuildFinished');
         },
         // 当插件构建完成的时候触发
@@ -21,7 +21,7 @@ module.exports = {
             let Fs = require("fire-fs");
             let Path = require("fire-path");
 
-            Editor.log("[HotUpdateTools] build platform:" + target.platform);
+            Editor.warn("[HotUpdateTools] build platform:" + target.platform);
             if (target.platform === "win32" || target.platform === "android" || target.platform === "ios" || target.platform === "mac") {
                 let root = Path.normalize(target.dest);
                 let url = Path.join(root, "main.js");
@@ -49,11 +49,11 @@ module.exports = {
                         if (err) {
                             throw err;
                         }
-                        Editor.log("[HotUpdateTools] SearchPath updated in built main.js for hot update");
+                        Editor.warn("[HotUpdateTools] SearchPath updated in built main.js for hot update");
                     });
                 });
             } else {
-                Editor.log("[HotUpdateTools] don't need update main.js, platform: " + target.platform);
+                Editor.warn("[HotUpdateTools] don't need update main.js, platform: " + target.platform);
             }
             let time = new Date().getTime();
             // 通知panel更新时间

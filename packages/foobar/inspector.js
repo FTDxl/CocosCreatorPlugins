@@ -16,7 +16,7 @@ Vue.component('foobar-inspector', {
     },
     methods: {
         onBtnClickTest() {
-            Editor.log('test');
+            Editor.warn('test');
         }
     }
 });

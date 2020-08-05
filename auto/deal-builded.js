@@ -28,7 +28,7 @@ Editor.Panel.extend({
             data: {},
             methods: {
                 onBtnClickTest() {
-                    Editor.log("onBtnClickTest");
+                    Editor.warn("onBtnClickTest");
                 },
                 _onBuild(options) {
                     console.log('Building ' + options.platform + ' to ' + options.dest);
@@ -56,7 +56,7 @@ Editor.Panel.extend({
                                 let sourceData = JSON.parse(Fs.readFileSync(sourceFilePath, 'utf-8'));
                                 destData.json = sourceData;
                                 Fs.writeFileSync(destFilePath, JSON.stringify(destData));
-                                Editor.log(`[ServerInfo] change: ${item} - ${Path.relative(projectPath, destFilePath)}`);
+                                Editor.warn(`[ServerInfo] change: ${item} - ${Path.relative(projectPath, destFilePath)}`);
                             } else {
                                 console.log("不存在文件：" + sourceFilePath);
                             }
@@ -71,7 +71,7 @@ Editor.Panel.extend({
 
     messages: {
         'editor:build-start': function (event, target) {
-            Editor.log('build-start');
+            Editor.warn('build-start');
         },
         'editor:build-finished': function (event, target) {
             this.plugin._onBuild(target);
